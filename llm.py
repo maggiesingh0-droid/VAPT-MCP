@@ -18,9 +18,9 @@ def analyze_vulnerability(target_url):
     user_prompt = f"Develop a preliminary vulnerability testing plan for the target URL: {target_url}"
     
     try:
-        # हमने यहाँ बिल्कुल सटीक 2.0-flash मॉडल सेट किया है
+        # हमने यहाँ बिल्कुल सटीक 3.6-flash मॉडल सेट किया है
         response = client.models.generate_content(
-            model='gemini-2.0-flash',
+            model='gemini-3.6-flash',
             contents=user_prompt,
             config=types.GenerateContentConfig(
                 system_instruction=system_instruction,
